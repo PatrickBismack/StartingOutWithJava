@@ -8,14 +8,28 @@ public class SalesTax {
 
         double countryTax = 0.02;
 
+        double stateTaxAmount;
+
+        double countryTaxAmount;
+
+        double totalTaxAmount;
+
+        double finalPurchasePrice;
+
         double amount;
 
         Scanner keyboard = new Scanner(System.in);
         System.out.print("Enter the purchase amount: ");
             amount = keyboard.nextDouble();
-        System.out.println("The purchase amount was $" + amount + ", the state sales tax was $" + (stateTax * amount)
-                + ", the country sales tax was $" + (countryTax * amount) + ", the total tax was $" + ((stateTax + countryTax) * amount)
-                + ", the final purchase price was $" + (amount + ((stateTax + countryTax) * amount)));
 
+            stateTaxAmount = stateTax * amount;
+            countryTaxAmount = countryTax * amount;
+            totalTaxAmount = countryTaxAmount + stateTaxAmount;
+            finalPurchasePrice = (amount + totalTaxAmount);
+
+        System.out.println("The purchase amount was $" + String.format("%,.2f", amount) + ", the state sales tax was $"
+                + String.format("%,.2f", stateTaxAmount) + ", the country sales tax was $" + String.format("%,.2f", countryTaxAmount)
+                + ", the total tax was $" + String.format("%,.2f", totalTaxAmount) + ", the final purchase price was $"
+                + String.format("%,.2f", finalPurchasePrice));
     }
 }
