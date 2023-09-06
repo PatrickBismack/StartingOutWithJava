@@ -6,6 +6,8 @@ public class SalesPrediction {
 
         double sales = 4600000;
 
-        System.out.print("The east coast division will generate $" + (sales * percent));
+        double eastCoastSales = sales * percent;
+
+        System.out.print("The east coast division will generate $" + eastCoastSales);
     }
 }
