@@ -16,9 +16,7 @@ public class PersonalInformation {
 
         String collegeMajor = "Computer Science";
 
-        System.out.println("Name: " + name);
-        System.out.println("Address: " + address + ", " + city + ", " + state + ", " + zipCode);
-        System.out.println("Telephone: " + telephoneNumber);
-        System.out.println("College Major: " + collegeMajor);
+        System.out.print("Name: " + name + "\nAddress: " + address + ", " + city + ", " + state + ", " + zipCode + "\nTelephone: " + telephoneNumber
+                + "\nCollege Major: " + collegeMajor);
     }
 }
