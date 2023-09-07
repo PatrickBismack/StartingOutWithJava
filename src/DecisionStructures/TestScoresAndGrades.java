@@ -25,19 +25,19 @@ public class TestScoresAndGrades {
             average = (test1 + test2 + test3) / 3;
 
         if (average >= 90) {
-            System.out.print("You test average was " + average + "%, so your letter grade is an A");
+            System.out.print("You test average was " + String.format("%.2f", average) + "%, so your letter grade is an A");
         }
         else if (average >= 80 && average <= 89) {
-            System.out.print("You test average was " + average + "%, so your letter grade is a B");
+            System.out.print("You test average was " + String.format("%.2f", average) + "%, so your letter grade is a B");
         }
         else if (average >= 70 && average <= 79) {
-            System.out.print("You test average was " + average + "%, so your letter grade is a C");
+            System.out.print("You test average was " + String.format("%.2f", average) + "%, so your letter grade is a C");
         }
         else if (average >= 60 && average <= 69){
-            System.out.print("You test average was " + average + "%, so your letter grade is a D");
+            System.out.print("You test average was " + String.format("%.2f", average) + "%, so your letter grade is a D");
         }
         else {
-            System.out.print("You test average was " + average + "%, so your letter grade is an E");
+            System.out.print("You test average was " + String.format("%.2f", average) + "%, so your letter grade is an E");
         }
     }
 }
