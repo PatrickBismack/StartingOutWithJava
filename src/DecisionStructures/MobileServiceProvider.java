@@ -12,6 +12,8 @@ public class MobileServiceProvider {
 
         double cost;
 
+        double costDifference;
+
         Scanner keyboard = new Scanner(System.in);
         System.out.print("Enter the letter of your plan: ");
             plan = keyboard.nextLine().charAt(0);
@@ -28,7 +30,13 @@ public class MobileServiceProvider {
                     cost = 39.99 + (-minutesOver * 0.45);
                 }
 
-                System.out.print("With plan " + Character.toString(plan) + " your total is $" + String.format("%.2f", cost));
+                System.out.print("With plan " + Character.toString(plan) + " your total is $" + String.format("%.2f", cost) + ".");
+                    costDifference = 59.99 + (-(900 - minutes) * 0.40);
+
+                if (costDifference <= cost) {
+                    cost = cost - costDifference;
+                    System.out.print(" If you switch to plan b, you could save $" + String.format("%.2f", cost) + ".");
+                }
                 break;
             case 'b':
                 minutesOver = 900 - minutes;
@@ -39,6 +47,11 @@ public class MobileServiceProvider {
                 }
 
                 System.out.print("With plan " + Character.toString(plan) + " your total is $" + String.format("%.2f", cost));
+
+                if (69.99 <= cost) {
+                    cost = cost - 69.99;
+                    System.out.print(" If you switch to plan c, you could save $" + String.format("%.2f", cost) + ".");
+                }
                 break;
             case 'c':
                 System.out.print("Your bill is $69.99");
