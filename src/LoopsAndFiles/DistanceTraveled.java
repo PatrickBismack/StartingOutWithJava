@@ -1,5 +1,6 @@
 package LoopsAndFiles;
 
+import java.io.*;
 import java.util.Scanner;
 
 public class DistanceTraveled {
@@ -10,6 +11,8 @@ public class DistanceTraveled {
 
         int time;
 
+        File file = new File("src/LoopsAndFiles/distanceTraveled.txt");
+
         Scanner keyboard = new Scanner(System.in);
         System.out.print("Enter the speed of the vehicle (mph): ");
             speed = keyboard.nextInt();
@@ -17,11 +20,22 @@ public class DistanceTraveled {
         System.out.print("Enter the number of hours traveled: ");
             time = keyboard.nextInt();
 
-        System.out.println("Hour        Distance Traveled \n------------------------------");
-        for (int i = 1; i <= time; i++) {
-            distance = speed * i;
+        try {
+            FileWriter fileWriter = new FileWriter(file);
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            PrintWriter printWriter = new PrintWriter(bufferedWriter);
 
-            System.out.println(i + "           " + distance);
+            printWriter.println("Hour        Distance Traveled \n------------------------------");
+            for (int i = 1; i <= time; i++) {
+                distance = speed * i;
+
+                printWriter.println(i + "           " + distance);
+            }
+            printWriter.close();
+        }
+        catch (IOException ioException) {
+            System.out.print(ioException);
+            System.exit(1);
         }
     }
 }
