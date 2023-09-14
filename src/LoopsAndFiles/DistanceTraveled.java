@@ -26,7 +26,7 @@ public class DistanceTraveled {
             PrintWriter printWriter = new PrintWriter(bufferedWriter);
 
             printWriter.println("Hour        Distance Traveled \n------------------------------");
-            for (int i = 1; i <= time; i++) {
+            for (int i = 1; i <= time; i++) { //O(n)
                 distance = speed * i;
 
                 printWriter.println(i + "           " + distance);
