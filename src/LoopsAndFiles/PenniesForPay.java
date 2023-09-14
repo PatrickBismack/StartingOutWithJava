@@ -29,7 +29,7 @@ public class PenniesForPay {
 
         System.out.println("Day     Days Pay     Total Pay\n------------------------------");
 
-        for (int i = 1; i <= days; i++) {
+        for (int i = 1; i <= days; i++) { //O(n)
             pay = i * penny;
             salary = salary + pay;
             System.out.println(i + "       " + String.format("%.2f", pay) + "         " + String.format("%.2f", salary));
