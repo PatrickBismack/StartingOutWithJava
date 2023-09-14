@@ -11,9 +11,12 @@ public class SumOfNumbers {
         System.out.print("Enter a positive nonzero integer: ");
             number = keyboard.nextInt();
 
-        for (int i = 1; i <= number; i++) {
+        /*for (int i = 1; i <= number; i++) { //O(n)
             sum = sum + i;
-        }
+        }*/
+
+        sum = (number * (number + 1))/2; //O(1)
+
         System.out.print("The sum of all natural numbers to " + number + " is " + sum);
     }
 }
