@@ -1,0 +1,2 @@
+this file contains all lowercase letters.
+once it's copied to uppercase.txt all the letters wil be uppercase.
